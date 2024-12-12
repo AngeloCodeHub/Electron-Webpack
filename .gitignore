@@ -1,3 +1,6 @@
+
+_note
+
 # Logs
 logs
 *.log
@@ -55,6 +58,7 @@ typings/
 *.tgz
 
 # Yarn Integrity file
+.yarn/*
 .yarn-integrity
 
 # dotenv environment variables file
