@@ -1,15 +1,13 @@
-OS：Windows
-WebServer：
+OS Admin：Windows
 Runtime：Node.JS
-SSH：
 Language：TypeScript
 Package Manager：Yarn
-FrameWork-CSS：
-FrameWork-FrontEnd：
-FrameWork-BackEnd：
-Desktop：ElectronJS
-Bundler：Webpack
+FrameWork-Desktop：ElectronJS
+Library-Other：
+Bundler：Webpack（forge）
 Linter：ESLint8
-DataBase：SQLite
+DataBase：MySQL
 ORM：
-ProjectTools：
+Basic Knowledge：
+ProjectTools：VSCODE｜GitHubCopilot Git｜GitHub
+Compiler：Forge
