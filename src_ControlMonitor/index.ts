@@ -11,12 +11,9 @@ const createWindow = (): void => {
   const mainWindow = new BrowserWindow({
     height: 300,
     width: 450,
-    // 拿掉工具列
-    // frame:false,
     webPreferences: {
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
-      sandbox:false,
-      // devTools: false,
+      sandbox: false,
     },
   });
   // 固定視窗長與寬
@@ -28,13 +25,13 @@ const createWindow = (): void => {
 app.on('ready', createWindow);
 
 app.whenReady().then(() => {
-  const KTVPress = 15
   const GamePress = 17
+  const KTVPress = 18
 
   const F5Press = globalShortcut.register('F5', () => {
     // console.log('F5 is pressed')
     // 執行外部程式ControlMyMonitor.exe
-    exec(`ControlMyMonitor.exe /SetValue Secondary 60 ${KTVPress}`, (err: any, stdout: any, stderr: any) => {
+    exec(`ControlMyMonitor.exe /SetValue Primary 60 ${GamePress}`, (err: any, stdout: any, stderr: any) => {
 
       if (err) {
         console.error(err);
@@ -47,7 +44,7 @@ app.whenReady().then(() => {
   })
   const F6Press = globalShortcut.register('F6', () => {
     // console.log('F6 is pressed')
-    exec(`ControlMyMonitor.exe /SetValue Secondary 60 ${GamePress}`, (err: any, stdout: any, stderr: any) => {
+    exec(`ControlMyMonitor.exe /SetValue Primary 60 ${KTVPress}`, (err: any, stdout: any, stderr: any) => {
       if (err) {
         console.error(err);
         return;
